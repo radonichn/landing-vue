@@ -1,15 +1,27 @@
 <template>
   <div id="app">
     <FirstBlock />
+    <SecondBlock :c="content['second']" />
   </div>
 </template>
 
 <script>
 import FirstBlock from "./components/FirstBlock.vue";
+import SecondBlock from "./components/SecondBlock.vue";
+import json from "./assets/content.json";
 export default {
   name: "app",
   components: {
-    FirstBlock
+    FirstBlock,
+    SecondBlock
+  },
+  data() {
+    return {
+      content: json
+    };
+  },
+  mounted() {
+    console.log(this.content);
   }
 };
 </script>
@@ -24,5 +36,15 @@ export default {
 }
 .bold {
   font-family: "PT Bold";
+}
+@media all and (max-width: 768px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+@media all and (max-width: 576px) {
+  .wrapper {
+    width: 90%;
+  }
 }
 </style>

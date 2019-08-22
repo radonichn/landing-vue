@@ -5,7 +5,7 @@
       <div class="slider-item row align-items-center">
         <div class="text col-12 col-md-5 col-xl-5">
           <p class="h3 bold">Inspire your inspiration</p>
-          <p class="h5">Simple to use for your app, products showcase and your inspiration</p>
+          <p class="h4">Simple to use for your app, products showcase and your inspiration</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit</p>
           <i class="fab fa-apple fa-3x"></i>
           <i class="fab fa-android fa-3x"></i>

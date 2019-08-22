@@ -1,0 +1,44 @@
+{
+  "second": {
+    "title": "Tinyone features",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.",
+    "cards": [
+      {
+        "id": "1",
+        "icon": "fas fa-mobile-alt",
+        "title": "Fully Responsive",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum."
+      },
+      {
+        "id": "2",
+        "icon": "far fa-lemon",
+        "title": "Fully Layered PSD",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum."
+      },
+      {
+        "id": "3",
+        "icon": "far fa-folder",
+        "title": "Font Awesome Icons",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum."
+      },
+      {
+        "id": "4",
+        "icon": "fas fa-code",
+        "title": "HTML3 & CSS3 ",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum."
+      },
+      {
+        "id": "5",
+        "icon": "far fa-envelope",
+        "title": "Email Template",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum."
+      },
+      {
+        "id": "6",
+        "icon": "far fa-bookmark",
+        "title": "Free to download",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum."
+      }
+    ]
+  }
+}
