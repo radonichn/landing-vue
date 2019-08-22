@@ -4,15 +4,15 @@
     "menu": [
       {
         "name": "Features",
-        "href": "#"
+        "href": "/features"
       },
       {
         "name": "Support",
-        "href": "#"
+        "href": "/support"
       },
       {
         "name": "Blog",
-        "href": "#"
+        "href": "/blog"
       }
     ]
   },
@@ -87,21 +87,22 @@
         "contact@halovietnam.com",
         "+844 35149182"
       ],
-      "right": [
-        "Examples",
-        "Shop",
-        "License",
-        "Contact",
-        "About",
-        "Privacy",
-        "Terms",
-        "Download",
-        "Support",
-        "Documents",
-        "Media",
-        "Blog",
-        "Forums"
-      ]
+      "right": {
+        "items_in_column": 3,
+        "items": [
+          "Examples",
+          "Shop",
+          "License",
+          "Contact",
+          "About",
+          "Privacy",
+          "Terms",
+          "Download",
+          "Support",
+          "Documents",
+          "Media"
+        ]
+      }
     }
   }
 }

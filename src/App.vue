@@ -2,7 +2,7 @@
   <div id="app">
     <FirstBlock :c="content" />
     <SecondBlock :c="content['second']" />
-    <ThirdBlock :c="content['third']" />
+    <ThirdBlock :c="content['third']" :sendMail="sendMail" />
   </div>
 </template>
 
@@ -22,11 +22,17 @@ export default {
     return {
       content: json
     };
+  },
+  methods: {
+    sendMail() {
+      alert("Send message successfully");
+    }
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+$yellow: #fcdb00;
 #app {
   font-family: "PT Sans";
 }
@@ -36,6 +42,11 @@ export default {
 }
 .bold {
   font-family: "PT Bold";
+}
+@media all and (max-width: 1024px) {
+  .wrapper {
+    width: 70%;
+  }
 }
 @media all and (max-width: 768px) {
   .wrapper {

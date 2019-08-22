@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .first-block {
   padding: 55px 0;
   background-color: #fcdb00;
