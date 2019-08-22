@@ -66,5 +66,42 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum."
       }
     ]
+  },
+  "third": {
+    "title": "Keep in touch with us",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.",
+    "form": {
+      "placeholder": "Enter your email to update",
+      "submit": "submit"
+    },
+    "icons": [
+      "fab fa-facebook-square",
+      "fab fa-twitter-square",
+      "fab fa-google-plus-square",
+      "fab fa-pinterest-square"
+    ],
+    "contacts": {
+      "left": [
+        "HALOVIETNAM LTD",
+        "66, Dang Van ngu, Dong Da Hanoi, Vietnam",
+        "contact@halovietnam.com",
+        "+844 35149182"
+      ],
+      "right": [
+        "Examples",
+        "Shop",
+        "License",
+        "Contact",
+        "About",
+        "Privacy",
+        "Terms",
+        "Download",
+        "Support",
+        "Documents",
+        "Media",
+        "Blog",
+        "Forums"
+      ]
+    }
   }
 }
