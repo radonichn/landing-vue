@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "PT Sans"; /* Имя шрифта */
+  src: url("./fonts/PTSans-Regular.ttf"); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: "PT Bold"; /* Имя шрифта */
+  src: url("./fonts/PTSans-Bold.ttf"); /* Путь к файлу со шрифтом */
+}
