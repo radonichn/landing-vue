@@ -1,4 +1,30 @@
 {
+  "header": {
+    "title": "tinytone",
+    "menu": [
+      {
+        "name": "Features",
+        "href": "#"
+      },
+      {
+        "name": "Support",
+        "href": "#"
+      },
+      {
+        "name": "Blog",
+        "href": "#"
+      }
+    ]
+  },
+  "first": [
+    {
+      "id": "1",
+      "title": "Inspire your inspiration",
+      "subtitle": "Simple to use for your app, products showcase and your inspiration",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit",
+      "icons": ["fab fa-apple", "fab fa-android", "fab fa-windows"]
+    }
+  ],
   "second": {
     "title": "Tinyone features",
     "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.",

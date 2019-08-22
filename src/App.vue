@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <FirstBlock />
+    <FirstBlock :c="content" />
     <SecondBlock :c="content['second']" />
   </div>
 </template>
@@ -19,9 +19,6 @@ export default {
     return {
       content: json
     };
-  },
-  mounted() {
-    console.log(this.content);
   }
 };
 </script>

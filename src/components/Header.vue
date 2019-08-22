@@ -2,14 +2,17 @@
   <nav class="navbar d-flex justify-content-between">
     <div class="logo d-flex">
       <img src="../assets/fingerprint.png" alt="logo" />
-      <a class="navbar-brand" href="#">tinyone</a>
+      <a class="navbar-brand" href="#">{{c.title}}</a>
     </div>
 
     <div class="collapse navbar-collapse show">
       <div class="navbar-nav d-flex flex-row">
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Support</a>
-        <a class="nav-item nav-link" href="#">Blog</a>
+        <a
+          class="nav-item nav-link"
+          :href="link.href"
+          v-for="link in c.menu"
+          :key="link.href"
+        >{{link.name}}</a>
       </div>
     </div>
   </nav>
@@ -17,7 +20,8 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  props: ["c"]
 };
 </script>
 
