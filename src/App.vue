@@ -11,6 +11,7 @@ import FirstBlock from "./components/FirstBlock.vue";
 import SecondBlock from "./components/SecondBlock.vue";
 import ThirdBlock from "./components/ThirdBlock.vue";
 import json from "./assets/content.json";
+import axios from "axios";
 export default {
   name: "app",
   components: {
@@ -25,7 +26,14 @@ export default {
   },
   methods: {
     sendMail() {
-      alert("Send message successfully");
+      axios
+        .post("https://formfarm.im/nikolayradonich@gmail.com", {
+          name: "dasdsa",
+          email: "dsadsa@dasd.sa"
+        })
+        .then(res => {
+          console.log("Send message successfully", res);
+        });
     }
   }
 };
@@ -40,6 +48,7 @@ $yellow: #fcdb00;
   width: 60%;
   margin: 0 auto;
 }
+
 .bold {
   font-family: "PT Bold";
 }

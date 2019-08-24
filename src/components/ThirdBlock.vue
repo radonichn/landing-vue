@@ -4,14 +4,20 @@
       <div class="form text-center">
         <p class="h3 title bold">{{c.title}}</p>
         <p class="h5 subtitle">{{c.subtitle}}</p>
-        <form action>
+        <form action="https://formfarm.im/nikolayradonich@gmail.com" method="POST">
           <div class="row">
             <input
               type="text"
               class="form-control col-12 col-md-8"
               :placeholder="c.form.placeholder"
+              name="email"
             />
-            <button class="btn bold col-3" type="submit" @click.prevent="sendMail">{{c.form.submit}}</button>
+            <button
+              class="btn bold col-3"
+              name="submit"
+              type="submit"
+              @click.prevent="sendMail"
+            >{{c.form.submit}}</button>
           </div>
         </form>
       </div>
@@ -44,6 +50,15 @@
 export default {
   name: "Thirdblock",
   props: ["c", "sendMail"],
+  data() {
+    return {
+      swiperOption: {
+        pagination: {
+          el: ".swiper-pagination"
+        }
+      }
+    };
+  },
   computed: {
     itemsInColumn() {
       return parseInt(this.c.contacts.right.items_in_column);
@@ -138,7 +153,7 @@ $yellow_h: #beaa10;
           > .row {
             justify-content: center;
             button {
-              margin-top: 10px;
+              margin: 10px 0 0;
               padding: 5px;
             }
           }
