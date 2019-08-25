@@ -4,13 +4,14 @@
       <div class="form text-center">
         <p class="h3 title bold">{{c.title}}</p>
         <p class="h5 subtitle">{{c.subtitle}}</p>
-        <form action="https://formfarm.im/nikolayradonich@gmail.com" method="POST">
-          <div class="row">
+        <form>
+          <div class="row justify-content-between">
             <input
               type="text"
               class="form-control col-12 col-md-8"
               :placeholder="c.form.placeholder"
               name="email"
+              v-model="email"
             />
             <button
               class="btn bold col-3"
@@ -20,6 +21,9 @@
             >{{c.form.submit}}</button>
           </div>
         </form>
+        <span
+          :class="[this.isError ? 'error' : 'success', this.isError === 'loading' ? 'loading' : '']"
+        >{{this.status}}</span>
       </div>
       <div class="socials row justify-content-center">
         <i
@@ -47,16 +51,20 @@
 </template>
 
 <script>
+import Email from "../assets/smtp.js";
 export default {
   name: "Thirdblock",
-  props: ["c", "sendMail"],
+  props: ["c"],
   data() {
     return {
       swiperOption: {
         pagination: {
           el: ".swiper-pagination"
         }
-      }
+      },
+      email: "",
+      isError: true,
+      status: ""
     };
   },
   computed: {
@@ -85,6 +93,41 @@ export default {
       }
       arr.push(tmp);
       return arr;
+    },
+    formValid() {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(this.email).toLowerCase());
+    }
+  },
+  methods: {
+    sendMail() {
+      this.status = "Loading...";
+      this.isError = "loading";
+      if (this.formValid) {
+        let templateParams = {
+          to: this.email,
+          subject: "Test site",
+          msg:
+            "Привіт, це перевірка тестового завдання, яке зробив Ніколай Радоніч."
+        };
+        window.emailjs
+          .send("gmail", "landing_vue", templateParams)
+          .then(res => {
+            this.isError = false;
+            this.status = "Message has been sent successfully!";
+            setTimeout(() => {
+              this.status = "";
+              this.isError = true;
+            }, 1000);
+          })
+          .catch(err => {
+            this.isError = true;
+            this.status = err;
+          });
+      } else {
+        this.isError = true;
+        this.status = "Email is incorrect";
+      }
     }
   }
 };
@@ -99,7 +142,7 @@ $yellow_h: #beaa10;
   .wrapper {
     .form {
       width: 80%;
-      margin: auto;
+      margin: 0 auto 40px;
       .title {
         color: $yellow;
       }
@@ -107,7 +150,11 @@ $yellow_h: #beaa10;
         color: #898989;
       }
       form {
-        margin: 40px 0 80px;
+        margin: 40px 0 10px;
+        > .row {
+          width: 100%;
+          margin: 0;
+        }
         input,
         button {
           padding: 20px;
@@ -117,6 +164,20 @@ $yellow_h: #beaa10;
           background-color: $yellow;
           padding: 0 20px;
           margin-left: 20px;
+        }
+      }
+      > span {
+        width: 100%;
+        display: block;
+        text-align: left;
+        &.success {
+          color: rgba(5, 161, 5, 1);
+        }
+        &.error {
+          color: rgba(238, 0, 0, 1);
+        }
+        &.loading {
+          color: rgb(219, 158, 25);
         }
       }
     }
@@ -151,12 +212,16 @@ $yellow_h: #beaa10;
         width: 95%;
         form {
           > .row {
-            justify-content: center;
+            justify-content: center !important;
             button {
               margin: 10px 0 0;
               padding: 5px;
             }
           }
+        }
+        > span {
+          text-align: center;
+          margin: 0;
         }
       }
       .contacts {

@@ -2,7 +2,7 @@
   <div id="app">
     <FirstBlock :c="content" />
     <SecondBlock :c="content['second']" />
-    <ThirdBlock :c="content['third']" :sendMail="sendMail" />
+    <ThirdBlock :c="content['third']" />
   </div>
 </template>
 
@@ -23,18 +23,6 @@ export default {
     return {
       content: json
     };
-  },
-  methods: {
-    sendMail() {
-      axios
-        .post("https://formfarm.im/nikolayradonich@gmail.com", {
-          name: "dasdsa",
-          email: "dsadsa@dasd.sa"
-        })
-        .then(res => {
-          console.log("Send message successfully", res);
-        });
-    }
   }
 };
 </script>
