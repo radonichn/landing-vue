@@ -11,7 +11,6 @@ import FirstBlock from "./components/FirstBlock.vue";
 import SecondBlock from "./components/SecondBlock.vue";
 import ThirdBlock from "./components/ThirdBlock.vue";
 import json from "./assets/content.json";
-import axios from "axios";
 export default {
   name: "app",
   components: {
