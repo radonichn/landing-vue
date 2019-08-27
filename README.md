@@ -11,3 +11,4 @@ npm run serve
 ```
 and your app will be served on http://localhost:8080/
 
+To change content in the landing page, you need to change the file: src/assets/content.json
